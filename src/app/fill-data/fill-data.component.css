@@ -1,0 +1,29 @@
+.wrapper {
+  height: 70vh;
+  width: 90%;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.art-1 {
+  width: 15%;
+}
+.art-2 {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 5%;
+}
+.card-img-top {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+.form-group {
+  margin: 2rem;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+}

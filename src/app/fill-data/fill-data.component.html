@@ -1,0 +1,51 @@
+<section class="wrapper">
+  <article class="art-1">
+    <h1>Enter Card Data</h1>
+    <div class="form-group">
+      <label for="">Title</label>
+      <input
+        type="text"
+        placeholder="Enter here"
+        class="form-control"
+        [(ngModel)]="titleItem"
+      />
+    </div>
+    <div class="form-group">
+      <label for="">Date</label>
+      <input
+        type="date"
+        placeholder="Enter here"
+        class="form-control"
+        [(ngModel)]="dateItem"
+      />
+    </div>
+    <div class="form-group">
+      <label for="">Upload</label>
+      <input
+        type="file"
+        placeholder="Enter here"
+        class="form-control"
+        (change)="uploadImg($event)"
+        [(ngModel)]="uploadValue"
+      />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary col-md-12 d-block" (click)="onSaveData()">
+        Save
+      </button>
+    </div>
+  </article>
+  <div class="art-2">
+    <article class="cardItem" *ngFor="let item of cardList">
+      <div class="card" style="width: 18rem">
+        <img src="{{ item.img }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{ item.date }}</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
